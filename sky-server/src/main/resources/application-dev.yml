@@ -10,3 +10,13 @@ sky:
     host: localhost
     port: 6379
     database: 0
+  alioss:
+    endpoint: oss-cn-beijing.aliyuncs.com
+    access-key-id: LTAI5t8uF9GNJLBWWrssa7Gs
+    access-key-secret: m6BUKnSzQCIsg2noRGEp6Akq8IJRQd
+    bucket-name: java-sky-z
+#  AccessKey ID
+#  LTAI5t8uF9GNJLBWWrssa7Gs
+#
+#  AccessKey Secret
+#  m6BUKnSzQCIsg2noRGEp6Akq8IJRQd
