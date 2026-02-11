@@ -55,4 +55,18 @@ public interface DishService {
      * @return
      */
     List<Dish> list(Long categoryId);
+
+
+    /**
+     * 条件查询菜品和口味
+     * @param dish
+     * @return
+     */
+    List<DishVO> listWithFlavor(Dish dish);
+
+    /**
+     * 清理菜品缓存
+     * @param categoryId 分类ID，null表示清理所有菜品缓存
+     */
+    void cleanDishCache(Long categoryId);
 }
