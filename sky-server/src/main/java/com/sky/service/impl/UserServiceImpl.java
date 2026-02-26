@@ -78,4 +78,15 @@ public class UserServiceImpl implements UserService {
         String openid = jsonObject.getString("openid");
         return openid;
     }
+
+    /**
+     * 用户登出（简化版本）
+     * @param token JWT令牌
+     */
+    @Override
+    public void logout(String token) {
+        // 简化版本：仅记录日志，实际应用中可以结合Redis实现完整的登出逻辑
+        log.info("用户登出，token：{}", token);
+        // TODO: 实际项目中应该将token加入黑名单或清除相关会话信息
+    }
 }

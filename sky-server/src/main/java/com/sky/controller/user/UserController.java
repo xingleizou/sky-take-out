@@ -14,6 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -60,5 +61,20 @@ public class UserController {
                 .build();
         
         return Result.success(userLoginVO);
+    }
+    
+    /**
+     * 用户登出
+     * @param token
+     * @return
+     */
+    @PostMapping("/logout")
+    @ApiOperation("用户登出")
+    public Result<String> logout(@RequestHeader("authentication") String token) {
+        log.info("用户登出，token：{}", token);
+        
+        userService.logout(token);
+        
+        return Result.success("登出成功");
     }
 }

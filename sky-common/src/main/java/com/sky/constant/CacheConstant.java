@@ -29,4 +29,9 @@ public class CacheConstant {
      * 分类缓存过期时间（分钟）
      */
     public static final long CATEGORY_CACHE_EXPIRE = 60;
+    
+    /**
+     * Token黑名单缓存键前缀
+     */
+    public static final String TOKEN_BLACKLIST_PREFIX = "token:blacklist:";
 }

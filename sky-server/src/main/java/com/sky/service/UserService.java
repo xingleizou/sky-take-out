@@ -11,4 +11,10 @@ public interface UserService {
      * @return
      */
     User wxLogin(UserLoginDTO userLoginDTO);
+    
+    /**
+     * 用户登出
+     * @param token JWT令牌
+     */
+    void logout(String token);
 }
